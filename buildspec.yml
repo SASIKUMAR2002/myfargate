@@ -13,8 +13,8 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t my-static-site .
-      - docker tag my-static-site:latest $ECR_REPO_URI:$IMAGE_TAG
+      - docker build -t testecr .
+      - docker tag testecr:latest $ECR_REPO_URI:$IMAGE_TAG
   post_build:
     commands:
       - echo Pushing the Docker image to ECR...
